@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Button Embeds</title>
+  <style>
+   /* Your CSS styling here */
+   .button-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+
+    .toggle-button {
+        background-color: #3498db;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        color: #fff;
+        cursor: pointer;
+        padding: 10px 15px;
+        margin: 5px;
+        transition: background-color 0.3s ease;
+    }
+    .toggle-button:hover {
+      background-color: orange; /* Change hover color to orange */
+    }
+
+    .toggle-button.active {
+      background-color: orange;
+    }
+
+    .embed-container {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="button-container">
+    <button class="toggle-button">Request Library Instruction</button>
+    <button class="toggle-button">General Library Comments and Suggestions</button>
+    <button class="toggle-button">Suggest a Website Change</button>
+    <button class="toggle-button">Request an Embedded Librarian</button>
+  </div>
+
+  <div class="button-container">
+    <button class="toggle-button">MT Engage ePortfolio Instruction</button>
+    <button class="toggle-button">Library-owned print materials (online form)</button>
+    <button class="toggle-button">Library-owned audiovisual materials (online form)</button>
+    <button class="toggle-button">Request a Book, Music, or Video Purchase</button>
+  </div>
+
+  <div class="button-container">
+    
+    <button class="toggle-button">Request a Database or Journal Title Purchase</button>
+    <button class="toggle-button">Request Rush Processing</button>
+    <button class="toggle-button">Visiting Scholar Privileges Request Form</button>
+    <button class="toggle-button">Library Checkout Privileges for Non-enrolled Students</button>
+  </div>
+
+    
+    
+    <!-- Add empty buttons here to keep the grid layout -->
+  
+
+  <!-- Previous embed containers -->
+
+<div class="embed-container" id="embed1">
+    <!-- Embed content for "Request Library Instruction" -->
+    <script type="text/javascript" src="https://form.jotform.com/jsform/22285228106146"></script>
+  </div>
+  
+  <div class="embed-container" id="embed2">
+    <!-- Embed content for "General Library Comments and Suggestions" -->
+    <script type="text/javascript" src="https://form.jotform.com/jsform/22766451010950"></script> 
+   
+  </div>
+  
+  <!-- Add more embed containers for the remaining buttons -->
+  
+  <div class="embed-container" id="embed3">
+    <!-- Embed content for "Suggest a Website Change" -->
+    <div id="form_1aa0f8b138bfbdaaf377d35c883d1ae5"></div><script type="text/javascript" src="https://mtsu.libwizard.com/form_loader.php?id=1aa0f8b138bfbdaaf377d35c883d1ae5&noheader=0"></script>
+  </div>
+  
+  <div class="embed-container" id="embed4">
+    <!-- Embed content for "Request an Embedded Librarian" -->
+    <script type="text/javascript" src="https://form.jotform.com/jsform/32336557295865"></script>
+  </div>
+  
+  <div class="embed-container" id="embed5">
+    <!-- Embed content for "MT Engage ePortfolio Instruction" -->
+    <script type="text/javascript" src="https://form.jotform.com/jsform/72194600373958"></script>
+  </div>
+  
+  <div class="embed-container" id="embed6">
+    <!-- Embed content for "Library-owned print materials (online form)" -->
+    <div id="form_42220233d3f0b176c56d69d768958dd9"></div><script type="text/javascript" src="https://mtsu.libwizard.com/form_loader.php?id=42220233d3f0b176c56d69d768958dd9&noheader=0"></script>
+  </div>
+  
+  <div class="embed-container" id="embed7">
+    <!-- Embed content for "Library-owned audiovisual materials (online form)" -->
+    <div id="form_b476a014728bc9bacfc99d806de0578c"></div><script type="text/javascript" src="https://mtsu.libwizard.com/form_loader.php?id=b476a014728bc9bacfc99d806de0578c&noheader=0"></script>
+  </div>
+  
+  <div class="embed-container" id="embed8">
+    <!-- Embed content for "Request a Book, Music, or Video Purchase" -->
+    <div id="form_f2e46afe4ef7cfda89918ff14517e0be"></div><script type="text/javascript" src="https://mtsu.libwizard.com/form_loader.php?id=f2e46afe4ef7cfda89918ff14517e0be&noheader=0"></script>
+  </div>
+  
+  <div class="embed-container" id="embed9">
+    <!-- Embed content for "Request a Database or Journal Title Purchase" -->
+    <!--<script type="text/javascript" src="https://form.jotform.com/jsform/90445344319962"></script>-->
+    
+  </div>
+  
+  <div class="embed-container" id="embed10">
+    <!-- Embed content for "Visiting Scholar Privileges Request Form" -->
+    <script type="text/javascript" src="https://form.jotform.com/jsform/22694723940964"></script>
+ </div>
+  
+  <div class="embed-container" id="embed11">
+    <!-- Embed content for "Visiting Scholar Privileges Request Form" -->
+    <div id="form_65a8fbf666f804ce66b072e8d0e27b99"></div><script type="text/javascript" src="https://mtsu.libwizard.com/form_loader.php?id=65a8fbf666f804ce66b072e8d0e27b99&noheader=0"></script>
+ </div>
+  
+  <div class="embed-container" id="embed12">
+    <!-- Embed content for "Library Checkout Privileges for Non-enrolled Students" -->
+    <script type="text/javascript" src="https://form.jotform.com/jsform/60206116400942"></script>
+    
+  </div>
+  
+  <!-- End of embed containers -->
+  
+  <!-- Add the JavaScript code for toggling the visibility of the embeds here -->
+  <script>
+    const buttons = document.querySelectorAll(".toggle-button");
+    const embeds = document.querySelectorAll(".embed-container");
+  
+    buttons.forEach((button, index) => {
+      button.addEventListener("click", () => {
+        // Hide all embeds
+        embeds.forEach(embed => {
+          embed.style.display = "none";
+        });
+  
+        // Remove 'active' class from all buttons
+        buttons.forEach(btn => {
+          btn.classList.remove("active");
+        });
+  
+        // Show the corresponding embed
+        embeds[index].style.display = "block";
+  
+        // Add 'active' class to the clicked button
+        button.classList.add("active");
+      });
+    });
+  </script>
+</body>
+</html>
